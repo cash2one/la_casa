@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{ name | title  }}</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script src="http://api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
-  <script type="text/javascript">
-    ymaps.ready(init);
-    var myMap,
-        myPlacemark;
-
-    function init(){     
-        myMap = new ymaps.Map("map", {
-            center: [{{ latitude }}, {{ longitude }}],
-            zoom: 10
-        });
-
-        myPlacemark = new ymaps.Placemark([{{ latitude }}, {{ longitude }}], { 
-            hintContent: '{{ name | title }}'
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-    }
-    </script>
-</head>
-  <body>
+{% extends "base.html" %}
+{% block content%}
     <div id="map" style="width: 600px; height: 400px"></div>
-  </body>
-</html>
+{% endblock %}
