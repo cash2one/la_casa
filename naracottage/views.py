@@ -1,7 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
+from website.models import Property
 
-# Create your views here.
 
 def home(request):
-    return HttpResponse('Hello World')
+    prop = Property.objects.get(name='narofominsk')
+    template = loader.get_template('home.html')
+    location = prop.location
+    latitude, longitude = location.split(',')
+    context = {
+                'name': prop.name,
+                'latitude': latitude,
+                'longitude': longitude,
+              }
+    return HttpResponse(template.render(context, request))
