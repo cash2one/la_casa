@@ -1,0 +1,6 @@
+.uk-navbar-nav>li>a[href='#'] {
+    cursor: pointer;
+}
+.uk-navbar-nav>li>a {
+    border: 0px;
+}

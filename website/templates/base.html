@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{% static 'css/uikit.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
         {% block styles %}
         {% endblock %}
         <script src="http://api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
@@ -27,7 +28,7 @@
         </script>
     </head>
     <body>
-        <nav>
+        <nav class="uk-navbar uk-navbar-attached">
             {% block nav %}
             {% endblock %}
         </nav>
