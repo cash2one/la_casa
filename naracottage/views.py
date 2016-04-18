@@ -13,5 +13,6 @@ def home(request):
                 'name': prop.name,
                 'latitude': latitude,
                 'longitude': longitude,
+                'phone': prop.contact,
               }
     return HttpResponse(template.render(context, request))
