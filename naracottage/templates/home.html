@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/naracottage/nav.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/naracottage/home.css' %}">
+{% endblock %}
 {% block nav %}
     {% include "nav.html" %}
 {% endblock %}
