@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'naracottage',
+    'arbatflat',
     'website',
     'django.contrib.admin',
     'django.contrib.auth',
