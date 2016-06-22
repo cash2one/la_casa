@@ -1,4 +1,4 @@
-from settings import *
+from the_cottage.settings import *
 
 ALLOWED_HOSTS = ['test.naracottage.com', 'www.test.naracottage.com']
 
