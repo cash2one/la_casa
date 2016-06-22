@@ -1,0 +1,25 @@
+.uk-navbar {
+    background-color: #FF530D;
+    color: #2B3A42;
+}
+.uk-navbar-brand {
+    text-shadow: none;
+    color: #2B3A42;
+}
+.uk-navbar-nav>li>a {
+    text-shadow: none;
+    color: #2B3A42;
+}
+.uk-navbar-nav>li.uk-open>a, .uk-navbar-nav>li:hover>a, .uk-navbar-nav>li>a:focus{
+    background-color: #FF530D;
+    color: #2B3A42;
+    cursor: pointer;
+    border-bottom: 3px solid;
+    border-color: #DC3522;
+}
+
+.uk-navbar-brand:focus, .uk-navbar-brand:hover{
+    background-color: #FF530D;
+    color: #2B3A42;
+    cursor: pointer;
+}
