@@ -6,7 +6,7 @@ from website.models import Property
 
 def home(request):
     prop = Property.objects.get(name='narofominsk')
-    template = loader.get_template('home.html')
+    template = loader.get_template('naracottage_home.html')
     location = prop.location
     latitude, longitude = location.split(',')
     context = {
