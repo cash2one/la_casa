@@ -32,10 +32,8 @@
             {% block nav %}
             {% endblock %}
         </nav>
-        <div class="uk-margin-top">
-            {% block content %}
-            {% endblock %}
-        </div>
+        {% block content %}
+        {% endblock %}
         <script type="text/javascript" src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/uikit.min.js' %}"></script>
         {% block scripts %}

@@ -1,25 +1,25 @@
 .uk-navbar {
-    background-color: #374140;
-    color: #FFFFFF;
+    background-color: #ECF0F1;
+    color: #2C3E50;
 }
 .uk-navbar-brand {
     text-shadow: none;
-    color: #FFFFFF;
+    color: #2C3E50;
 }
 .uk-navbar-nav>li>a {
     text-shadow: none;
-    color: #FFFFFF;
+    color: #2C3E50;
 }
 .uk-navbar-nav>li.uk-open>a, .uk-navbar-nav>li:hover>a, .uk-navbar-nav>li>a:focus{
-    background-color: #374140;
-    color: #FFFFFF;
+    background-color: #ECF0F1;
+    color: #2C3E50;
     cursor: pointer;
     border-bottom: 3px solid;
-    border-color: #DC3522;
+    border-color: #E74C3C;
 }
 
 .uk-navbar-brand:focus, .uk-navbar-brand:hover{
-    background-color: #374140;
-    color: #FFFFFF;
+    background-color: #ECF0F1;
+    color: #2C3E50;
     cursor: pointer;
 }

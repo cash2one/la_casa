@@ -3,10 +3,28 @@
 {% block styles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/naracottage/nav.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/naracottage/home.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/dotnav.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/slideshow.min.css' %}">
 {% endblock %}
 {% block nav %}
     {% include "nav.html" %}
 {% endblock %}
 {% block content%}
+    <div data-uk-slideshow="{animation: 'swipe', autoplay: true, autoplayInterval: 1000}">
+        <ul class="uk-slideshow">
+            <li><img src='http://getuikit.com/docs/images/placeholder_800x400_1.jpg'></li>
+            <li><img src='http://getuikit.com/docs/images/placeholder_800x400_2.jpg'></li>
+            <li><img src='http://getuikit.com/docs/images/placeholder_800x400_3.jpg'></li>
+        </ul>
+        <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+            <li data-uk-slideshow-item="0"><a href=""></a></li>
+            <li data-uk-slideshow-item="1"><a href=""></a></li>
+            <li data-uk-slideshow-item="1"><a href=""></a></li>
+        </ul>
+    </div>
     <div id="map" style="width: 600px; height: 400px"></div>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/slideshow.min.js' %}"></script>
+<script src="{% static 'js/slideshow-fx.min.js' %}"></script>
 {% endblock %}
