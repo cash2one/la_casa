@@ -36,7 +36,7 @@
                     hintContent: '{{ name | title }}'
                 });
                 myMap.controls.add('routeEditor');
-                myMap.behaviors.disable(['scrollZoom']);
+                myMap.behaviors.disable(['scrollZoom', 'drag']);
                 myMap.geoObjects.add(myPlacemark);
             }
         </script>
