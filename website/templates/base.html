@@ -10,6 +10,18 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
         {% block styles %}
         {% endblock %}
+    </head>
+    <body>
+        <nav class="uk-navbar uk-navbar-attached">
+            {% block nav %}
+            {% endblock %}
+        </nav>
+        {% block content %}
+        {% endblock %}
+        <script type="text/javascript" src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/uikit.min.js' %}"></script>
+        {% block scripts %}
+        {% endblock %}
         <script src="http://api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
         <script type="text/javascript">
             ymaps.ready(init);
@@ -23,20 +35,10 @@
                 myPlacemark = new ymaps.Placemark([{{ latitude }}, {{ longitude }}], {
                     hintContent: '{{ name | title }}'
                 });
+                myMap.controls.add('routeEditor');
+                myMap.behaviors.disable(['scrollZoom']);
                 myMap.geoObjects.add(myPlacemark);
             }
         </script>
-    </head>
-    <body>
-        <nav class="uk-navbar uk-navbar-attached">
-            {% block nav %}
-            {% endblock %}
-        </nav>
-        {% block content %}
-        {% endblock %}
-        <script type="text/javascript" src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/uikit.min.js' %}"></script>
-        {% block scripts %}
-        {% endblock %}
     </body>
 </html>
