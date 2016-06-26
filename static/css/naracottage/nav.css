@@ -1,6 +1,7 @@
 .uk-navbar {
     background-color: #ECF0F1;
     color: #2C3E50;
+    z-index: 1000;
 }
 .uk-navbar-brand {
     text-shadow: none;
