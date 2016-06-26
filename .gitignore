@@ -63,3 +63,6 @@ target/
 
 # environment file
 envfile
+
+# Vim swap file
+*.swp

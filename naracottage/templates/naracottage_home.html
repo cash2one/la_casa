@@ -10,9 +10,12 @@
     {% include "nav.html" %}
 {% endblock %}
 {% block content%}
-    <div class="uk-background">
+    <div class="uk-text-center uk-margin-top">
+        <h1>{{ title }}</h1>
+    </div>
+    <div id="photos" class="uk-background">
         <img class="uk-invisible" src="" width="" height="" alt="">
-        <div data-uk-slideshow="{animation: 'swipe', autoplay: true, autoplayInterval: 1000}">
+        <div data-uk-slideshow="{animation: 'swipe', autoplay: true, autoplayInterval: 7000}">
             <ul class="uk-slideshow">
                 <li><img class="uk-height-viewport" src='http://getuikit.com/docs/images/placeholder_800x400_1.jpg'></li>
                 <li><img class="uk-height-viewport" src='http://getuikit.com/docs/images/placeholder_800x400_2.jpg'></li>
@@ -23,6 +26,22 @@
                 <li data-uk-slideshow-item="1"><a href=""></a></li>
                 <li data-uk-slideshow-item="2"><a href=""></a></li>
             </ul>
+        </div>
+        <div class="uk-margin-large-left uk-margin-large-right uk-margin-top">
+            <a class="uk-button uk-button-primary" href="#">Download all photos</a>
+            <hr>
+        </div>
+    </div>
+    <div id="price" class="uk-grid uk-grid-collapse uk-margin-top uk-margin-bottom">
+        <div class="uk-width-1-2 uk-container uk-container-center">
+            <p class="uk-text-center">{{ about }}</p>
+        </div>
+        <div class="uk-width-1-2 uk-container uk-container-center">
+            <p>{{ price_dollars }} USD</p>
+            <p>{{ price_roubles }} RUB</p>
+            <hr>
+            <p>Address: {{ address }}</p>
+            <a class="uk-button uk-button-primary" href="#map">Show on map</a>
         </div>
     </div>
     <div class="uk-panel-box">

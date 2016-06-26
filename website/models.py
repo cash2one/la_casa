@@ -21,11 +21,25 @@ class Photos(models.Model):
         return unicode(self.id)
 
 
-class Sitetext(models.Model):
+class SitetextEn(models.Model):
     name = models.CharField(max_length=30)
-    text = models.TextField()
-    section = models.CharField(max_length=15)
-    language = models.CharField(max_length=5)
+    title = models.TextField()
+    about = models.TextField()
+    address = models.TextField()
+    price_dollars = models.IntegerField()
+    price_roubles = models.IntegerField()
 
     def __unicode__(self):
         return unicode(self.id)
+
+class SitetextRu(models.Model):
+    name = models.CharField(max_length=30)
+    title = models.TextField()
+    about = models.TextField()
+    address = models.TextField()
+    price_dollars = models.IntegerField()
+    price_roubles = models.IntegerField()
+
+    def __unicode__(self):
+        return unicode(self.id)
+
