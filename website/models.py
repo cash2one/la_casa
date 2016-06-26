@@ -6,7 +6,7 @@ from django.db import models
 class Property(models.Model):
     name = models.CharField(max_length=30)
     location = models.CharField(max_length=100)
-    contact = models.CharField(max_length=15)
+    contact = models.CharField(max_length=25)
     email_id = models.EmailField()
 
     def __unicode__(self):
@@ -26,8 +26,8 @@ class SitetextEn(models.Model):
     title = models.TextField()
     about = models.TextField()
     address = models.TextField()
-    price_dollars = models.IntegerField()
-    price_roubles = models.IntegerField()
+    price_dollars = models.CharField(max_length=15)
+    price_roubles = models.CharField(max_length=15)
 
     def __unicode__(self):
         return unicode(self.id)

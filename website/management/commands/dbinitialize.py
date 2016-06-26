@@ -10,7 +10,7 @@ class Command(BaseCommand):
         try:
             name = 'narofominsk'
             location = '55.406073, 36.685741'
-            contact = '1234567890'
+            contact = '+7 909 65 75 173'
             email_id = 'random@random.com'
             prop = Property.objects.create(name=name, location=location,
                                            contact=contact, email_id=email_id)
@@ -32,7 +32,7 @@ class Command(BaseCommand):
         try:
             name = 'arbatflat'
             location = '55.743355, 37.579924'
-            contact = '1234567890'
+            contact = '+7 909 65 75 173'
             email_id = 'random@random.com'
             prop = Property.objects.create(name=name, location=location,
                                            contact=contact, email_id=email_id)
