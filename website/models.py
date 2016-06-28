@@ -26,7 +26,7 @@ class SitetextEn(models.Model):
     title = models.TextField()
     about = models.TextField()
     address = models.TextField()
-    price_dollars = models.CharField(max_length=15)
+    price_euros = models.CharField(max_length=15)
     price_roubles = models.CharField(max_length=15)
 
     def __unicode__(self):
@@ -37,7 +37,7 @@ class SitetextRu(models.Model):
     title = models.TextField()
     about = models.TextField()
     address = models.TextField()
-    price_dollars = models.CharField(max_length=15)
+    price_euros = models.CharField(max_length=15)
     price_roubles = models.CharField(max_length=15)
 
     def __unicode__(self):
