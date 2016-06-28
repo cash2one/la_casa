@@ -11,7 +11,7 @@ def home(request):
     latitude, longitude = location.split(',')
     sitetext_en = SitetextEn.objects.get(name='narofominsk')
     context = {
-                'name': prop.name,
+                'logo_url': 'images/logo_naracottage.png',
                 'latitude': latitude,
                 'longitude': longitude,
                 'phone': prop.contact,

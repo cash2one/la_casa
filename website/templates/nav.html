@@ -1,6 +1,7 @@
+{% load staticfiles %}
 <div class="uk-container uk-container-center uk-margin-top uk-margin-small-bottom">
     <a href="#offcanvas-navbar" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-    <a href="/" class="uk-navbar-brand">{{ name | title  }}</a>
+    <a href="/" class="uk-navbar-brand"><img src="{% static logo_url %}" width=200 /></a>
     <ul class="uk-navbar-nav uk-hidden-small">
         <li><a href="#photos" data-uk-smooth-scroll="{offset: 50}">Photos</a></li>
         <li><a href="#price" data-uk-smooth-scroll="{offset: 80}">Price &amp; Details</a></li>
