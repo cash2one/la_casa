@@ -24,6 +24,17 @@ class Command(BaseCommand):
                                                     price_dollars=price_dollars,
                                                     price_roubles=price_roubles)
             sitetext_en.save()
+            name = 'narofominsk'
+            title = 'Продается элитный коттедж под Наро-фоминском (киевское шоссе)'
+            about = 'Продается коттедж по киевскому направлению в районе Наро-фоминска. Участок 15 соток в охраняемом небольшом коттеджном поселке. Дом из кирпича 290 квадратных метров плюс 100 квадратных метров цокольного этажа, возможно обустройство мансарды.'
+            address = 'Московская область, Наро-Фоминский район, садовое товарищество Осень, улица Профессора Арефьева 16'
+            price_dollars = '600,000'
+            price_roubles = '35,000,000'
+            sitetext_ru = SitetextRu.objects.create(name=name, title=title,
+                                                    about=about, address=address,
+                                                    price_dollars=price_dollars,
+                                                    price_roubles=price_roubles)
+            sitetext_ru.save()
             self.stdout.write(self.style.SUCCESS('%s property added.' % name))
         except Exception as ex:
             self.stdout.write(self.style.ERROR('Could not add %s property.' % name))
@@ -38,4 +49,3 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS('%s property added.' % name))
         except Exception as ex:
             self.stdout.write(self.style.ERROR('Could not add %s property.' % name))
-
