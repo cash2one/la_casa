@@ -37,8 +37,8 @@ class SitetextRu(models.Model):
     title = models.TextField()
     about = models.TextField()
     address = models.TextField()
-    price_dollars = models.IntegerField()
-    price_roubles = models.IntegerField()
+    price_dollars = models.CharField(max_length=15)
+    price_roubles = models.CharField(max_length=15)
 
     def __unicode__(self):
         return unicode(self.id)
