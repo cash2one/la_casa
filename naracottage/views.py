@@ -18,7 +18,7 @@ def home(request):
                 'title': sitetext_en.title,
                 'about': sitetext_en.about,
                 'address': sitetext_en.address,
-                'price_dollars': sitetext_en.price_dollars,
+                'price_euros': sitetext_en.price_euros,
                 'price_roubles': sitetext_en.price_roubles
               }
     return HttpResponse(template.render(context, request))
