@@ -11,7 +11,8 @@
 {% endblock %}
 {% block content%}
     <div class="uk-text-center uk-margin-top">
-        <h1>{{ title }}</h1>
+        <h1 class="uk-visible-large">{{ title }}</h1>
+        <p class="uk-hidden-large uk-text-large uk-text-center">{{ title }}</p>
     </div>
     <div id="photos" class="uk-background">
         <img class="uk-invisible" src="" width="" height="" alt="">
@@ -27,47 +28,79 @@
                 <li data-uk-slideshow-item="2"><a href=""></a></li>
             </ul>
         </div>
-        <div class="uk-margin-large-left uk-margin-large-right uk-margin-top">
-            <a class="uk-button uk-button-primary" href="#">Download all photos</a>
-            <hr>
+        <div class="uk-margin-top">
+            <a class="uk-visible-large uk-margin-large-left uk-button uk-button-primary" href="#">Download all photos</a>
+            <div class="uk-hidden-large uk-text-center">
+                <a class="uk-button uk-button-primary" href="#">Download all photos</a>
+            </div>
         </div>
     </div>
     <div id="price">
         <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-bottom">
             <div class="uk-width-1-2 uk-container uk-container-center">
-                <p class="uk-text-center">{{ about }}</p>
+                <p class="uk-hidden-large">{{ about }}</p>
+                <p class="uk-visible-large uk-text-center">{{ about }}</p>
             </div>
             <div class="uk-width-1-2 uk-container uk-container-center">
-                <p>{{ price_euros }} &#8364;</p>
-                <p>{{ price_roubles }} &#8381;</p>
-                <hr>
-                <p>Address: {{ address }}</p>
-                <a class="uk-button uk-button-primary" href="#map" data-uk-smooth-scroll="{offset: 50}">Show on map</a>
+                <div class="uk-visible-large">
+                    <p>Sale Price: {{ price_euros }} &#8364;</p>
+                    <p>Sale Price: {{ price_roubles }} &#8381;</p>
+                    <hr>
+                    <p>Address: {{ address }}</p>
+                    <a class="uk-button uk-button-primary" href="#map" data-uk-smooth-scroll="{offset: 50}">Show on map</a>
+                </div>
+                <div class="uk-hidden-large">
+                    <p class="uk-text-center uk-text-large">Sale Price</p>
+                    <p class="uk-text-center">{{ price_euros }} &#8364;</p>
+                    <p class="uk-text-center">{{ price_roubles }} &#8381;</p>
+                    <hr>
+                    <p>Address: {{ address }}</p>
+                    <div class="uk-text-center">
+                        <a class="uk-button uk-button-primary" href="#map" data-uk-smooth-scroll="{offset: 50}">Show on map</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="uk-margin-large-left uk-margin-large-right uk-margin-top">
             <hr>
         </div>
-        <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-bottom">
+        <div class="uk-grid uk-visible-large uk-grid-collapse uk-margin-top uk-margin-bottom">
             <div class="uk-width-1-3">
-                <img class="uk-align-center" src="{% static 'images/icon_garden.png' %}" alt="">
+                <img class="uk-align-center" src="{% static 'images/icon_garden.png' %}" width="200" height="200" alt="">
                 <div class="uk-text-center">Beautiful and well looked after garden with nearby forests and lakes.</div>
             </div>
             <div class="uk-width-1-3">
-                <img class="uk-align-center" src="{% static 'images/icon_internet.png' %}" alt="">
+                <img class="uk-align-center" src="{% static 'images/icon_internet.png' %}" width="200" height="200" alt="">
                 <div class="uk-text-center">Has high speed internet connectivity and digital television.</div>
             </div>
             <div class="uk-width-1-3">
-                <img class="uk-align-center" src="{% static 'images/icon_temperature.png' %}" alt="">
+                <img class="uk-align-center" src="{% static 'images/icon_temperature.png' %}" width="200" height="200" alt="">
                 <div class="uk-text-center">Can live in the house all year round. Electricity, gas, water are all connected and the house has heating.</div>
             </div>
         </div>
+        <div class="uk-hidden-large uk-margin-left uk-margin-right uk-margin">
+            <div>
+                <img class="uk-align-center" src="{% static 'images/icon_garden.png' %}" width="200" height="200" alt="">
+                <div class="uk-text-center">Beautiful and well looked after garden with nearby forests and lakes.</div>
+            </div>
+            <hr>
+            <div>
+                <img class="uk-align-center" src="{% static 'images/icon_internet.png' %}" width="200" height="200" alt="">
+                <div class="uk-text-center">Has high speed internet connectivity and digital television.</div>
+            </div>
+            <hr>
+            <div>
+                <img class="uk-align-center" src="{% static 'images/icon_temperature.png' %}" width="200" height="200" alt="">
+                <div class="uk-text-center">Can live in the house all year round. Electricity, gas, water are all connected and the house has heating.</div>
+            </div>
+        </div>
+
     </div>
     <div class="uk-panel-box">
         <div id="map" class="uk-background uk-height-viewport"></div>
     </div>
     <div id="contact">
-        <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-bottom">
+        <div class="uk-visible-large uk-grid uk-grid-collapse uk-margin-top uk-margin-bottom">
             <div class="uk-width-1-2 uk-container uk-container-center">
                 <div class="uk-text-center">If you have any questions or you would like to organize a viewing, please do not hesitate to contact us by calling the number below or filling out the form on the right.</div>
                 <hr>
@@ -78,19 +111,96 @@
                 <form class="uk-form">
                     <fieldset data-uk-margin>
                         <div class="uk-form-row">
-                            <input type="text" placeholder="Enter your name" />
+                            <input class="uk-form-width-large" type="text" placeholder="Enter your name" />
                         </div>
                         <div class"uk-form-row">
-                            <input type="text" placeholder="Enter your Email ID or phone number" />
+                            <input class="uk-form-width-large" type="text" placeholder="Enter your Email ID or phone number" />
                         </div>
                         <div class="uk-form-row">
-                            <textarea rows="4" placeholder="Enter your query"></textarea>
+                            <textarea class="uk-form-width-large" rows="4" placeholder="Enter your query"></textarea>
+                        </div>
+                        <div class="uk-form-row">
+                            <button class="uk-button uk-button-primary">Send</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="uk-hidden-large">
+            <div class="uk-margin-left uk-margin-right">
+                <div class="uk-text-center uk-margin-top">If you have any questions or you would like to organize a viewing, please do not hesitate to contact us by calling the number below or filling out the form on the right.</div>
+                <hr>
+                <div class="uk-text-center">+7 909 65 75 173 (Olga)</div>
+                <div class="uk-text-center">info@naracottage.com</div>
+            </div>
+            <div class="uk-margin-left uk-margin-right uk-margin-top">
+                <hr>
+                <form class="uk-form uk-text-center">
+                    <fieldset data-uk-margin>
+                        <div class="uk-form-row">
+                            <input class="uk-form-width-medium" type="text" placeholder="Enter your name" />
+                        </div>
+                        <div class"uk-form-row">
+                            <input class="uk-form-width-medium" type="text" placeholder="Enter your Phone Number" />
+                        </div>
+                        <div class="uk-form-row">
+                            <textarea class="uk-form-width-medium" rows="4" placeholder="Enter your query"></textarea>
                         </div>
                         <div class="uk-form-row">
                             <button class="uk-button uk-button-primary">Submit</a>
                         </div>
                     </fieldset>
                 </form>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div id="other-properties">
+        <div class="uk-visible-large">
+            <div class="uk-text-center">We have 2 more properties you might be interested in, check them out.</div>
+            <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-bottom">
+                <div class="uk-width-1-2 uk-container uk-container-center">
+                    <div class="uk-text-center">For rent: 3-room apartment in Moscow, Metro Smolenskaya</div>
+                    <hr>
+                    <div class="uk-text-center">Address: Ruzheynyy per, 4, Moscow</div>
+                    <div class="uk-thumbnail">
+                        <img src="{% static 'images/img_arbatflat.jpg' %}" />
+                        <div class="uk-thumbnail-caption"><a class="uk-text-muted" href="http://www.arbatflat.com">Arbat Flat</a></div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2 uk-container uk-container-center">
+                    <div class="uk-text-center">For rent: 4-room apartment in Moscow, Metro Krasnopresnenskaya</div>
+                    <hr>
+                    <div class="uk-text-center">Address: Ulitsa Nikolaeva, 4, Moscow</div>
+                    <div class="uk-thumbnail">
+                        <img src="{% static 'images/img_moskvaflat.jpg' %}" />
+                        <div class="uk-thumbnail-caption"><a class="uk-text-muted" href="http://www.moskvaflat.com/">Moskva Flat</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-hidden-large">
+            <div class="uk-text-center uk-margin uk-margin-left uk-margin-right">
+                We have 2 more properties you might be interested in, check them out.
+            </div>
+            <div class="uk-margin uk-margin-left uk-margin-right">
+                <div class="uk-text-center">For rent: 3-room apartment in Moscow, Metro Smolenskaya</div>
+                <hr>
+                <div class="uk-text-center">Address: Ruzheynyy per, 4, Moscow</div>
+                <div class="uk-thumbnail">
+                    <img src="{% static 'images/img_arbatflat.jpg' %}" />
+                    <div class="uk-thumbnail-caption"><a class="uk-text-muted" href="http://www.arbatflat.com">Arbat Flat</a></div>
+                </div>
+            </div>
+            <div class="uk-margin uk-margin-left uk-margin-right">
+                <div class="uk-text-center">For rent: 4-room apartment in Moscow, Metro Krasnopresnenskaya</div>
+                <hr>
+                <div class="uk-text-center">Address: Ulitsa Nikolaeva, 4, Moscow</div>
+                <div class="uk-thumbnail">
+                    <img src="{% static 'images/img_moskvaflat.jpg' %}" />
+                    <div class="uk-thumbnail-caption"><a class="uk-text-muted" href="http://www.moskvaflat.com/">Moskva Flat</a></div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
