@@ -16,11 +16,11 @@ class Command(BaseCommand):
                                            contact=contact, email_id=email_id)
             prop.save()
             name = 'narofominsk'
-            static_path = '/static/images/naracottage'
+            static_path = 'static/images/naracottage'
             absolute_path = os.path.abspath(static_path)
             photos = os.listdir(absolute_path)
             for photo in photos:
-                photo_path = '%s/%s' % (static_path, photo)
+                photo_path = '/%s/%s' % (static_path, photo)
                 photo_alt = photo
                 photo_model_obj = Photos.objects.create(name=name,
                                                         photo=photo_path,
