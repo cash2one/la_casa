@@ -2,15 +2,18 @@
 <div class="uk-margin-top uk-margin-small-bottom">
     <a href="#offcanvas-navbar" class="uk-navbar-toggle" data-uk-offcanvas></a>
     <a href="/" class="uk-navbar-brand"><img src="{% static logo_url %}" width="150" /></a>
-    <ul class="uk-navbar-nav uk-navbar-flip uk-margin-top uk-margin-right uk-visible-large">
-        <li>Заинтересованы? Звоните! {{ phone }}</li>
+    <ul class="uk-navbar-nav uk-navbar-flip">
+        <li><a href="">Заинтересованы? Звоните! {{ phone }}</a></li>
+        <li class="uk-parent" data-uk-dropdown>
+            <a href=""><i class="uk-icon-globe"></i> Lang</a>
+            <div class="uk-dropdown">
+                <ul class="uk-nav uk-nav-dropdown">
+                    <li><a href="/en/">English</a></li>
+                    <li><a href="/">Russian</a></li>
+                </ul>
+            </div>
+        </li>
     </ul>
-</div>
-<div class="uk-hidden-large">
-    <p class="uk-text-center">
-        Заинтересованы? Звоните!<br>
-        {{ phone }}
-    </p>
 </div>
 <div id="offcanvas-navbar" class="uk-offcanvas">
     <div class="uk-offcanvas-bar">
