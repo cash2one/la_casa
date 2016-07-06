@@ -16,7 +16,7 @@ class Command(BaseCommand):
                                            contact=contact, email_id=email_id)
             prop.save()
             name = 'narofominsk'
-            static_path = 'static/images/naracottage'
+            static_path = '/static/images/naracottage'
             absolute_path = os.path.abspath(static_path)
             photos = os.listdir(absolute_path)
             for photo in photos:
