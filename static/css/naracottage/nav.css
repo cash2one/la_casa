@@ -9,3 +9,26 @@
     color: #2C3E50;
     cursor: pointer;
 }
+.uk-navbar-nav>li.uk-open>a, .uk-navbar-nav>li:hover>a, .uk-navbar-nav>li>a:focus{
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    cursor: pointer;
+    border: none;
+}
+.uk-navbar-nav>li>a {
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+}
+.uk-nav-dropdown>li>a {
+    color: #2C3E50;
+    font-family: 'Noto Sans', sans-serif;
+}
+.uk-dropdown {
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    border: none;
+}
+.uk-nav-dropdown>li>a:hover .uk-nav-dropdown>li>a:focus {
+    background-color: #E74C3C;
+    color: #E74C3C;
+}
