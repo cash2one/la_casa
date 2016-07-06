@@ -15,6 +15,8 @@ class Property(models.Model):
 
 class Photos(models.Model):
     name = models.CharField(max_length=30)
+    alt_name = models.CharField(max_length=100)
+    # Make this photo_path and correct initialization script and views.py
     photo = models.CharField(max_length=100)
 
     def __unicode__(self):

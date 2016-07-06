@@ -18,14 +18,14 @@
         <img class="uk-invisible" src="" width="" height="" alt="">
         <div data-uk-slideshow="{animation: 'swipe', autoplay: true, autoplayInterval: 7000}">
             <ul class="uk-slideshow">
-                <li><img class="uk-height-viewport" src='http://getuikit.com/docs/images/placeholder_800x400_1.jpg'></li>
-                <li><img class="uk-height-viewport" src='http://getuikit.com/docs/images/placeholder_800x400_2.jpg'></li>
-                <li><img class="uk-height-viewport" src='http://getuikit.com/docs/images/placeholder_800x400_3.jpg'></li>
+                {% for alt_name, img_path in photo_map.items %}
+                <li><img class="uk-height-viewport" src="{{ img_path }}" width="800" height="400" alt={{ alt_name }}></li>
+                {% endfor %}
             </ul>
             <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
-                <li data-uk-slideshow-item="0"><a href=""></a></li>
-                <li data-uk-slideshow-item="1"><a href=""></a></li>
-                <li data-uk-slideshow-item="2"><a href=""></a></li>
+                {% for key in photo_map.keys %}
+                <li data-uk-slideshow-item="{{ forloop.counter0 }}"><a href=""></a></li>
+                {% endfor %}
             </ul>
         </div>
         <div class="uk-margin-top">

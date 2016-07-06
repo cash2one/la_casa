@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
 from website.models import Property, Photos, SitetextEn, SitetextRu
+import os
 
 class Command(BaseCommand):
     help = 'Initializes database with default values for all pages'
@@ -14,6 +15,17 @@ class Command(BaseCommand):
             prop = Property.objects.create(name=name, location=location,
                                            contact=contact, email_id=email_id)
             prop.save()
+            name = 'narofominsk'
+            static_path = 'static/images/naracottage'
+            absolute_path = os.path.abspath(static_path)
+            photos = os.listdir(absolute_path)
+            for photo in photos:
+                photo_path = '%s/%s' % (static_path, photo)
+                photo_alt = photo
+                photo_model_obj = Photos.objects.create(name=name,
+                                                        photo=photo_path,
+                                                        alt_name=photo_alt)
+                photo_model_obj.save()
             name = 'narofominsk'
             title = 'Cottage for sale near Moscow'
             about = 'Cottage for sale near Naro-Fominsk. 15 hectares of land in a protected small village. The house is 290 square meters and is made of bricks. There is an additional 100 square meter basement, and a large attic which can be turned into living space.'
