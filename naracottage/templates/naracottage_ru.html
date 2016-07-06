@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/naracottage/home.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/dotnav.min.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/slideshow.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/slidenav.min.css' %}">
 {% endblock %}
 {% block nav %}
     {% include "nav_ru.html" %}
@@ -18,12 +19,14 @@
     </div>
     <div id="photos" class="uk-background">
         <img class="uk-invisible" src="" width="" height="" alt="">
-        <div data-uk-slideshow="{animation: 'swipe', autoplay: true, autoplayInterval: 7000}">
+        <div class="uk-slidenav-position" data-uk-slideshow="{animation: 'swipe', autoplay: true, autoplayInterval: 7000}">
             <ul class="uk-slideshow">
                 {% for alt_name, img_path in photo_map.items %}
                 <li><img class="uk-height-viewport" src="{{ img_path }}" alt={{ alt_name }}></li>
                 {% endfor %}
             </ul>
+            <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+            <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
             <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
                 {% for key in photo_map.keys %}
                 <li data-uk-slideshow-item="{{ forloop.counter0 }}"><a href=""></a></li>
@@ -32,10 +35,7 @@
         </div>
     </div>
     <div id="download">
-        <a class="uk-visible-large uk-margin-large-left uk-button uk-button-primary" href="#">Скачать все Фотографии</a>
-        <div class="uk-hidden-large uk-text-center">
-            <a class="uk-button uk-button-primary" href="#">Скачать все Фотографии</a>
-        </div>
+        <a class="uk-visible-large uk-margin-large-left uk-button uk-button-primary" href="{% static 'images/naracottage/naracottage_photos.zip' %}">Скачать все Фотографии</a>
     </div>
     <div id="price">
         <div class="uk-grid uk-grid-collapse">
