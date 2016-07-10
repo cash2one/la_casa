@@ -26,7 +26,12 @@ html {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-#footer>div>a, #footer>div>a:hover, #footer>div>a:focus, #footer>div>a:link {
+#footer>div>a, #footer>div>a:link {
+    color: #E74C3C;
+    text-decoration: none;
+    cursor: pointer;
+}
+#footer>div>a:hover, #footer>div>a:focus {
     color: #ECF0F1;
     text-decoration: none;
     cursor: pointer;
