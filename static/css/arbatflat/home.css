@@ -1,14 +1,17 @@
 html {
-    background-color: #ECF0F1;
+    background-color: #FFFAD5;
 }
 #title>div>h1{
-    color: #ECF0F1;
+    color: #FFFAD5;
 }
 #title, #price, #download, #contact {
-    background-color: #2C3E50;
-    color: #ECF0F1;
+    background-color: #DB9E36;
+    color: #FFFAD5;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+#download, #price {
+    background-color: #105B63;
 }
 #download {
     padding-top: 15px;
@@ -17,17 +20,22 @@ html {
     padding-bottom: 15px;
 }
 .uk-button-primary, .uk-button-primary:active, .uk-button-primary:focus, .uk-button-primary:hover {
-    background-color: #E74C3C;
-    color: #ECF0F1;
+    background-color: #BD4932;
+    color: #FFFAD5;
 }
 #footer {
-    background-color: #2C3E50;
-    color: #ECF0F1;
+    background-color: #105B63;
+    color: #FFFAD5;
     padding-top: 50px;
     padding-bottom: 50px;
 }
-#footer>div>a, #footer>div>a:hover, #footer>div>a:focus, #footer>div>a:link {
-    color: #ECF0F1;
+#footer>div>a, #footer>div>a:link {
+    color: #FFD34E;
+    text-decoration: none;
+    cursor: pointer;
+}
+#footer>div>a:hover, #footer>div>a:focus {
+    color: #FFFAD5;
     text-decoration: none;
     cursor: pointer;
 }

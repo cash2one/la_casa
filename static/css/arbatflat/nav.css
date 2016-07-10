@@ -1,34 +1,35 @@
 .uk-navbar {
-    background-color: #ECF0F1;
-    color: #2C3E50;
+    background-color: #FFFAD5;
+    color: #DB9E36;
     z-index: 1000;
     border: none;
 }
 .uk-navbar-brand:focus, .uk-navbar-brand:hover{
-    background-color: #ECF0F1;
-    color: #2C3E50;
+    background-color: #FFFAD5;
+    color: #DB9E36;
     cursor: pointer;
 }
 .uk-navbar-nav>li.uk-open>a, .uk-navbar-nav>li:hover>a, .uk-navbar-nav>li>a:focus{
-    background-color: #ECF0F1;
-    color: #2C3E50;
+    background-color: #FFFAD5;
+    color: #105B63;
     cursor: pointer;
     border: none;
 }
 .uk-navbar-nav>li>a {
+    color: #105B63;
     font-family: 'Noto Sans', sans-serif;
     border: none;
 }
 .uk-nav-dropdown>li>a {
-    color: #2C3E50;
+    color: #105B63;
     font-family: 'Noto Sans', sans-serif;
 }
 .uk-dropdown {
-    background-color: #ECF0F1;
-    color: #2C3E50;
+    background-color: #FFFAD5;
+    color: #DB9E36;
     border: none;
 }
 .uk-nav-dropdown>li>a:hover .uk-nav-dropdown>li>a:focus {
-    background-color: #E74C3C;
-    color: #E74C3C;
+    background-color: #BD4932;
+    color: #BD4932;
 }
