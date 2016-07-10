@@ -21,7 +21,7 @@ class Command(BaseCommand):
         for photo in photos:
             # .zip file should not be added to Database.
             if '.zip' in photo:
-                pass
+                continue
             photo_path = '/%s/%s' % (static_path, photo)
             photo_alt = photo
             photo_model_obj = Photos.objects.create(name=NAME,
