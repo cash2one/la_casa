@@ -10,3 +10,4 @@ WSGI_APPLICATION = 'arbatflat.wsgi.application'
 STATIC_ROOT = os.environ.get('ARBATFLAT_STATIC_ROOT')
 
 DEBUG = False
+
