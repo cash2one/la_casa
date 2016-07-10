@@ -1,3 +1,33 @@
 html {
-    background-color: #EFEFEF;
+    background-color: #ECF0F1;
+}
+#title>div>h1{
+    color: #ECF0F1;
+}
+#title, #price, #download, #contact {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#download {
+    padding-top: 15px;
+}
+#price {
+    padding-bottom: 15px;
+}
+.uk-button-primary, .uk-button-primary:active, .uk-button-primary:focus, .uk-button-primary:hover {
+    background-color: #E74C3C;
+    color: #ECF0F1;
+}
+#footer {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#footer>div>a, #footer>div>a:hover, #footer>div>a:focus, #footer>div>a:link {
+    color: #ECF0F1;
+    text-decoration: none;
+    cursor: pointer;
 }
